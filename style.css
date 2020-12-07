@@ -26,8 +26,11 @@ textarea{
 } */
 
 .time-block{
+  border-right: 1px solid black;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   text-align: center;
-  border-radius: 15px;
+  background-color: bisque;
 }
 
 .row {
@@ -47,13 +50,13 @@ textarea{
   color: white;
 }
 
-.present {
-  background-color: #ff6961;
+.future {
+  background-color: #77dd77;
   color: white;
 }
 
-.future {
-  background-color: #77dd77;
+.present {
+  background-color: #ff6961;
   color: white;
 }
 
@@ -70,4 +73,8 @@ textarea{
   transition: all .3s ease-in-out;
   color: black;
   background-color: deeppink;
+}
+
+.container {
+  padding-bottom: 100px;
 }
