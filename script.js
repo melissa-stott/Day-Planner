@@ -5,22 +5,28 @@ var timeBlocks = $(".future");
 console.log(timeBlocks);
 
 currentDate.text(moment().format('MMMM Do YYYY, h:mm a'));
+var day = moment().format("MM/DD/YYYY");
 var hour = (moment().format("h"));
-var amPm = (moment().format("a"));
-var fullTime = hour + amPm;
-console.log(fullTime);
+var amPm = moment().format("a");
+var fullTime = day + " " + hour + ":00 " + amPm;
+var changingTime = Date.parse(fullTime);
+console.log("***fulltime = " + fullTime);
 
 for (var i = 0; i < row.length; i++){
     var tmp = row[i].childNodes[1].innerText;
+    // console.log("---tmp = " + day + " " + tmp);
+    var staticTime = Date.parse(day + " " + tmp);
     // console.log(tmp);
-    console.log(tmp);
+    // console.log(staticTime);
+    // console.log(changingTime);
 
-    if (tmp === fullTime){
+    if (staticTime === changingTime) {
         row[i].childNodes[3].classList.add("present");
-        console.log("Yay it worked");
-    } else if (tmp < fullTime){
+    } else if (staticTime < changingTime) {
+        console.log("It is past");
         row[i].childNodes[3].classList.add("past");
     } else {
+        console.log("It is future");
         row[i].childNodes[3].classList.add("future");
     }
 }
