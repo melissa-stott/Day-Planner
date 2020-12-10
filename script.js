@@ -28,3 +28,8 @@ if (staticTime === changingTime) {
     row[i].childNodes[3].classList.add("future");
 }
 }//This section is for gathering customer input and saving it to local storage.
+// Can I use the same var more than once? i.e. var row.
+var calInput = $(row).val;
+
+
+
