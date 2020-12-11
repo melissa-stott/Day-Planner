@@ -27,6 +27,8 @@ for (var i = 0; i < row.length; i++){
         console.log(innerId);
         var tmp = $('#' + innerId).val();
         localStorage.setItem(innerId, tmp);
+        $('.toast').toast({animation: true, delay: 2000, autohide: true});
+        $('.toast').toast('show');
     });
 
     var id = "input" + (i + 1);
