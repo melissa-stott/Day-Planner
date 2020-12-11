@@ -21,10 +21,6 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-/* .description{
-  white-space: pre-wrap;
-} */
-
 .time-block{
   border-right: 1px solid black;
   border-top-left-radius: 15px;
@@ -82,9 +78,4 @@ textarea{
 
 .container {
   padding-bottom: 100px;
-}
-
-.iconBg {
-  background: none;
-  border: none;
 }
