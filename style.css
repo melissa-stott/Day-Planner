@@ -70,10 +70,9 @@ textarea{
   border-top: 1px solid #000000;
   border-bottom-right-radius: 15px;
   background-color: rgb(85, 252, 160);
-  /* color: #06AED5; */
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 30px;
   transition: all .3s ease-in-out;
   color: black;
@@ -82,4 +81,9 @@ textarea{
 
 .container {
   padding-bottom: 100px;
+}
+
+.iconBg {
+  background: none;
+  border: none;
 }

@@ -15,21 +15,30 @@ console.log("***fulltime = " + fullTime);
 
 for (var i = 0; i < row.length; i++){
     var tmp = row[i].childNodes[1].innerText;
+    var staticTime = Date.parse(day + " " + tmp);
 
-var staticTime = Date.parse(day + " " + tmp);
+    console.log(row[i].childNodes[5]);
+    var btn = $(row[i].childNodes[5]);
+    btn.click(function(evt) {
+        var tmpBtn = $(evt.target).attr('id');
+        console.log("tmpBtn: " + tmpBtn + "!");
 
-if (staticTime === changingTime) {
-    row[i].childNodes[3].classList.add("present");
-} else if (staticTime < changingTime) {
-    console.log("It is past");
-    row[i].childNodes[3].classList.add("past");
-} else {
-    console.log("It is future");
-    row[i].childNodes[3].classList.add("future");
+        var innerId = "input" + tmpBtn[7];
+        console.log(innerId);
+        var tmp = $('#' + innerId).val();
+        localStorage.setItem(innerId, tmp);
+    });
+
+    var id = "input" + (i + 1);
+    $(row[i].childNodes[3]).val(localStorage.getItem(id));
+
+    if (staticTime === changingTime) {
+        row[i].childNodes[3].classList.add("present");
+    } else if (staticTime < changingTime) {
+        console.log("It is past");
+        row[i].childNodes[3].classList.add("past");
+    } else {
+        console.log("It is future");
+        row[i].childNodes[3].classList.add("future");
+    }
 }
-}//This section is for gathering customer input and saving it to local storage.
-// Can I use the same var more than once? i.e. var row.
-var calInput = $(row).val;
-
-
-
