@@ -12,4 +12,6 @@ The technologies that I used were:
 - Font Awesome
 
 Below you will find a screenshot of the deployed site, that can be found at https://melissa-stott.github.io/Day-Planner/
+
+
 ![Day-Planner](https://github.com/melissa-stott/Day-Planner/blob/main/Assets/Day-Planner_ScreenShot.png)
